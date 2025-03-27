@@ -44,6 +44,11 @@ It should look like this in the file:
 ```
 console=tty1 root=PARTUUID=68cab3f9-02 rootfstype=ext4 fsck.repair=yes rootwait usb-storage.quirks=174c:2362:u
 ```
+
+if 2 HDDs are connected, two things must be added, see
+![image](https://github.com/user-attachments/assets/cef7a10c-7120-496f-b182-242f27ad4793)
+
+
 This command will disable the UAS driver and enable the older usb-storage driver for your external drive. The 174c:2362 is the device’s ID, and you need to replace it with the appropriate ID for your specific device.
 
 3. Find Your Device ID:
@@ -52,6 +57,7 @@ To find the ID of your device, run the following command:
 lsusb
 ```
 This will display a list of connected USB devices. Find the line corresponding to your external drive, and note the ID (in the format 174c:2362 or something similar).
+![image](https://github.com/user-attachments/assets/f5481780-942d-409b-95b3-fbbd91526342)
 
 4. Reboot Your Raspberry Pi:
 Once you’ve added the usb-storage.quirks line with the correct ID, save the file and reboot your Raspberry Pi:
