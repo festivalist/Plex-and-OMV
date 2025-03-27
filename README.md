@@ -65,7 +65,10 @@ Once you’ve added the usb-storage.quirks line with the correct ID, save the fi
 sudo reboot
 ```
 5. Verify the Changes:
-After rebooting, check if the usb-storage driver is now active. Run the lsusb -t command again. If everything went correctly, you should now see that your external drive is using the usb-storage driver instead of UAS.
+After rebooting, check if the usb-storage driver is now active. Run the lsusb -t command again. If everything went correctly, you should now see that your external drive is using the **usb-storage** driver instead of UAS. (zumindest einer)
+
+![image](https://github.com/user-attachments/assets/08e0c1af-157a-41ba-b358-d5735270cbcc)
+
 
 Conclusion:
 That’s it! The issue should now be resolved, and your external drives should no longer disconnect after prolonged use or heavy activity. The fix disables the UAS driver and forces the system to use the more stable usb-storage driver, which works better with ASMedia controllersalso the speed was better now.
