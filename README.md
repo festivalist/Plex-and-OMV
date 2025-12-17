@@ -1,25 +1,45 @@
 # Plex-and-OMV
-ursprüngliches YT Video
+## ursprüngliches YT Video
 https://www.youtube.com/watch?v=yf0w7fu_KYw
 
-Wichtig: Raspberry Pi OS Lite Bookworm 32 bit no desktop environment verwenden (zu finden unter legacy)
+## Wichtig: Raspberry Pi OS Lite Bookworm 32 bit no desktop environment verwenden (zu finden unter legacy)
 
 dann folgendes in dieser Reihenfolge ausführen:
 
 1. SD Kart in Raspi stecken
 2. 2. Raspi rödeln lassen
- 
+3. sudo apt-get update && apt-get upgrade
+4. Anleitung befolgen
+5. https://pimylifeup.com/raspberry-pi-plex-server/
 
-Problem: 2 HDDs sind dran und beim kopieren verliert OMBV ständig die Verbindung
+
+## Problem 1: Plex ist nur erreichbar wenn PC angeschalten
+
+## Lösung 1: Pfade verweisen auf korrekten Ordner auf HDD aber falsch
+Fall für meine config:
+
+1. SSH into Raspi
+2. run "df -h" to see all connected drives
+3. look for HDDs such as "/srv/dev-disk-by-uuid-3694b700-02bd-46ea-999e-ffad60d35121"
+4. run "cd /srv/dev-disk-by-uuid-3694b700-02bd-46ea-999e-ffad60d35121"
+5. Gucken das die korrekten Ordner wie "Filme", Serien etc da sind
+6. Diese Pfade in dioe Plex Library kopieren
+/srv/dev-disk-by-uuid-3694b700-02bd-46ea-999e-ffad60d35121/18TB/Serien
+/srv/dev-disk-by-uuid-d5442fef-12d7-4e35-bef9-abd57d68c68d/Filme
+
+
+
+
+## Problem 2: 2 HDDs sind dran und beim kopieren verliert OMV ständig die Verbindung
 Lösung: UA driver gegen alten USB-storage driver in der config austauschen 
 original link: https://bashtan.ro/raspberry-pi-4-model-b-8gb-issue-hard-drives-disconnecting-software-solved/
 
 copy paste von der Seite falls später mal nicht verfügbar:
 
-The Problem:
+## The Problem:
 After updating to Debian Bookworm, my external drives began disconnecting after some time or under heavy use. Initially, I suspected it was a power supply issue. However, I had been using the official Raspberry Pi power supply, and the issue didn’t exist before the update. After further research, I discovered the problem was related to the UAS driver, which doesn’t play well with ASMedia controllers.
 
-The Solution:
+## The Solution:
 To fix the problem, you need to disable the UAS driver and enable the older usb-storage driver for your device. Here’s how you can do it.
 
 Step-by-Step Solution:
