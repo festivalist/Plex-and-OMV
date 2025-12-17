@@ -7,7 +7,7 @@ https://www.youtube.com/watch?v=yf0w7fu_KYw
 dann folgendes in dieser Reihenfolge ausführen:
 
 1. SD Kart in Raspi stecken
-2. 2. Raspi rödeln lassen
+2. Raspi rödeln lassen
 3. sudo apt-get update && apt-get upgrade
 4. Anleitung befolgen
 5. https://pimylifeup.com/raspberry-pi-plex-server/
@@ -19,7 +19,7 @@ dann folgendes in dieser Reihenfolge ausführen:
 Fall für meine config:
 
 1. SSH into Raspi
-2. run "df -h" to see all connected drives
+2. run ``` "df -h" ``` to see all connected drives
 3. look for HDDs such as "/srv/dev-disk-by-uuid-3694b700-02bd-46ea-999e-ffad60d35121"
 4. run "cd /srv/dev-disk-by-uuid-3694b700-02bd-46ea-999e-ffad60d35121"
 5. Gucken das die korrekten Ordner wie "Filme", Serien etc da sind
