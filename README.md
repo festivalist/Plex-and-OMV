@@ -20,13 +20,12 @@ Fall für meine config:
 
 1. SSH into Raspi
 2. run ``` "df -h" ``` to see all connected drives
-3. look for HDDs such as "/srv/dev-disk-by-uuid-3694b700-02bd-46ea-999e-ffad60d35121"
-4. run "cd /srv/dev-disk-by-uuid-3694b700-02bd-46ea-999e-ffad60d35121"
+3. look for HDDs such as ``` "/srv/dev-disk-by-uuid-3694b700-02bd-46ea-999e-ffad60d35121" ```
+4. run ``` "cd /srv/dev-disk-by-uuid-3694b700-02bd-46ea-999e-ffad60d35121" ```
 5. Gucken das die korrekten Ordner wie "Filme", Serien etc da sind
-6. Diese Pfade in dioe Plex Library kopieren
-/srv/dev-disk-by-uuid-3694b700-02bd-46ea-999e-ffad60d35121/18TB/Serien
-/srv/dev-disk-by-uuid-d5442fef-12d7-4e35-bef9-abd57d68c68d/Filme
-
+6. Diese Pfade in die Plex Library kopieren
+``` /srv/dev-disk-by-uuid-3694b700-02bd-46ea-999e-ffad60d35121/18TB/Serien ```
+``` /srv/dev-disk-by-uuid-d5442fef-12d7-4e35-bef9-abd57d68c68d/Filme ```
 
 
 
