@@ -27,9 +27,22 @@ Fall für meine config:
 ``` /srv/dev-disk-by-uuid-3694b700-02bd-46ea-999e-ffad60d35121/18TB/Serien ```
 ``` /srv/dev-disk-by-uuid-d5442fef-12d7-4e35-bef9-abd57d68c68d/Filme ```
 
+## Problem 2: Ich will meine Plex Metadaten kopieren / sichern
 
+## Lösung 1: Pfade sind hier:
+Raspberry Pi Plex dir:
+``` /var/lib/plexmediaserver/Library/Application Support/Plex Media Server ```
 
-## Problem 2: 2 HDDs sind dran und beim kopieren verliert OMV ständig die Verbindung
+Windows Plex dir: 
+``` %LOCALAPPDATA%\Plex Media Server\ ```
+
+WinSCP muss für den Datenaustausch Raspberry Pi <> Windows installiert werden
+donwload hier https://winscp.net/eng/download.php
+
+Nun habe ich die relevante Datei, ```  com.plexapp.plugins.library.db ``` von Windows kopiert und per WinSCP auf den Raspberry Pi geschoben, nach 
+``` /var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Plug-in Support/Databases ``` 
+
+## Problem 3: 2 HDDs sind dran und beim kopieren verliert OMV ständig die Verbindung
 Lösung: UA driver gegen alten USB-storage driver in der config austauschen 
 original link: https://bashtan.ro/raspberry-pi-4-model-b-8gb-issue-hard-drives-disconnecting-software-solved/
 
