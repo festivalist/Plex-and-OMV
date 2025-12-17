@@ -36,11 +36,24 @@ Raspberry Pi Plex dir:
 Windows Plex dir: 
 ``` %LOCALAPPDATA%\Plex Media Server\ ```
 
-WinSCP muss für den Datenaustausch Raspberry Pi <> Windows installiert werden
+WinSCP muss für den Datenaustausch Raspberry Pi <> Windows auf dem Win PC installiert werden
 donwload hier https://winscp.net/eng/download.php
+
+Nun stoppen wir den plexdienst auf dem Raspberry
+``` sudo systemctl disable plexmediaserver.service ```
 
 Nun habe ich die relevante Datei, ```  com.plexapp.plugins.library.db ``` von Windows kopiert und per WinSCP auf den Raspberry Pi geschoben, nach 
 ``` /var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Plug-in Support/Databases ``` 
+
+- Ich muss die Daten als root user verschieben, da ich als "Pi" user die vorhandene DB nicht überschreiben konnte.
+- Root user erstellen auf dem raspi: ```sudo passwd root```Passwort ausdenken und eingeben
+- Dann mit WinSCP auf dem Raspi einloggen, DB files verschieben
+- Dann in WinSCP den Owner auf User "Plex" umstellen, berechtigung auf 777 stellen
+- Nun neustarten ``` sudo reboot ```
+- Nun Service wieder enablen & starten
+``` sudo systemctl enable plexmediaserver.service ```
+``` sudo systemctl start plexmediaserver.service ```
+
 
 ## Problem 3: 2 HDDs sind dran und beim kopieren verliert OMV ständig die Verbindung
 Lösung: UA driver gegen alten USB-storage driver in der config austauschen 
