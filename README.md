@@ -1,4 +1,7 @@
 # Plex-and-OMV
+## Neuer initialversuch gemäß Anleitung hier
+https://pimylifeup.com/raspberry-pi-plex-server/
+
 ## ursprüngliches YT Video
 https://www.youtube.com/watch?v=yf0w7fu_KYw
 
