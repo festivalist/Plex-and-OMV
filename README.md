@@ -2,6 +2,8 @@
 ## Neuer initialversuch gemäß Anleitung hier
 https://pimylifeup.com/raspberry-pi-plex-server/
 
+### ^ zusätzlich dazu noch `sudo wget -O - https://github.com/OpenMediaVault-Plugin-Developers/installScript/raw/master/install | sudo bash`  
+
 ## ursprüngliches YT Video
 https://www.youtube.com/watch?v=yf0w7fu_KYw
 
