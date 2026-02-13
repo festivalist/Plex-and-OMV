@@ -119,3 +119,9 @@ That’s it! The issue should now be resolved, and your external drives should n
 Lösung:  auf raspi einloggen
 `sudo omv-firstaid`
 dann fix network interface, ja auf alles, rödel rödel und es geht wieder
+
+
+## Problem 6   ich muss die HDD von Plex an einen win PC anschließen
+Lösung: BTFRS Treiber auf Windows installieren, siehe hier
+`https://github.com/maharmstone/btrfs`
+
