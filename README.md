@@ -4,22 +4,12 @@ https://pimylifeup.com/raspberry-pi-plex-server/
 
 ### ^ zusätzlich dazu noch   
 `sudo wget -O - https://github.com/OpenMediaVault-Plugin-Developers/installScript/raw/master/install | sudo bash` 
-dann weiter in OMV im Browser
-
+dann weiter in OMV im Browser mit heise video
 
 ## ursprüngliches YT Video
 https://www.youtube.com/watch?v=yf0w7fu_KYw
 
-## Wichtig: Raspberry Pi OS Lite Bookworm 32 bit no desktop environment verwenden (zu finden unter legacy)
-
-dann folgendes in dieser Reihenfolge ausführen:
-
-1. SD Kart in Raspi stecken
-2. Raspi rödeln lassen
-3. sudo apt-get update && apt-get upgrade
-4. Anleitung befolgen
-5. https://pimylifeup.com/raspberry-pi-plex-server/
-
+## DEPRECATED 
 
 ## Problem 1: Plex ist nur erreichbar wenn PC angeschalten
 
@@ -69,7 +59,7 @@ original link: https://bashtan.ro/raspberry-pi-4-model-b-8gb-issue-hard-drives-d
 
 copy paste von der Seite falls später mal nicht verfügbar:
 
-## The Problem:
+## The Problem 4:
 After updating to Debian Bookworm, my external drives began disconnecting after some time or under heavy use. Initially, I suspected it was a power supply issue. However, I had been using the official Raspberry Pi power supply, and the issue didn’t exist before the update. After further research, I discovered the problem was related to the UAS driver, which doesn’t play well with ASMedia controllers.
 
 ## The Solution:
@@ -122,6 +112,10 @@ After rebooting, check if the usb-storage driver is now active. Run the lsusb -t
 
 ![image](https://github.com/user-attachments/assets/08e0c1af-157a-41ba-b358-d5735270cbcc)
 
-
 Conclusion:
 That’s it! The issue should now be resolved, and your external drives should no longer disconnect after prolonged use or heavy activity. The fix disables the UAS driver and forces the system to use the more stable usb-storage driver, which works better with ASMedia controllersalso the speed was better now.
+
+## Problem 5: nach OMV install wird der raspi trotz Kabel nicht im Netz gefunden  
+Lösung:  auf raspi einloggen
+`sudo omv-firstaid`
+dann fix network interface, ja auf alles, rödel rödel und es geht wieder
