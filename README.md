@@ -26,7 +26,7 @@ Fall für meine config:
 ``` /srv/dev-disk-by-uuid-d5442fef-12d7-4e35-bef9-abd57d68c68d/Filme ```
 
 ## Problem 2: Ich will meine Plex Metadaten kopieren / sichern
-
+## Note: Wenn es nur darum geht den Fortschritt zu sichern
 ## Lösung 1: Pfade sind hier:
 Raspberry Pi Plex dir:
 ``` /var/lib/plexmediaserver/Library/Application Support/Plex Media Server ```
