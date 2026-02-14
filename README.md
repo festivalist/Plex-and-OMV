@@ -46,7 +46,8 @@ Nun habe ich die relevante Datei, ```  com.plexapp.plugins.library.db ``` von Wi
 - Ich muss die Daten als root user verschieben, da ich als "Pi" user die vorhandene DB nicht überschreiben konnte.
 - Root user erstellen auf dem raspi: ```sudo passwd root```Passwort ausdenken und eingeben
 - Dann mit WinSCP auf dem Raspi einloggen, DB files verschieben
-- Dann in WinSCP den Owner auf User "Plex" umstellen, berechtigung auf 777 stellen
+- Dann in WinSCP den Owner auf User "Plex" umstellen, berechtigung auf 777 stellen. Beides Recursiv damit es auch die Unterordner betrifft
+- am Besten so `sudo chown -R plex:plex /var/lib/plexmediaserver`
 - Nun neustarten ``` sudo reboot ```
 - Nun Service wieder enablen & starten
 ``` sudo systemctl enable plexmediaserver.service ```
