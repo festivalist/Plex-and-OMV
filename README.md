@@ -9,6 +9,11 @@ dann weiter in OMV im Browser mit heise video
 ## ursprüngliches YT Video
 https://www.youtube.com/watch?v=yf0w7fu_KYw
 
+## spindown der HHDs verhindenr / auf null setzen damit sie immer verfügbar sind (besser bei NAS Platte)
+-  hdparm installieren `sudp apt install hdparm`
+-  sdX, X mit Buchstaben der jeweiligen HDD austauschen
+-  `sudo hdparm -S 0 /dev/sdX`
+
 ## DEPRECATED 
 
 ## Problem 1: Plex ist nur erreichbar wenn PC angeschalten
