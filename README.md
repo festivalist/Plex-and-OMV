@@ -1,6 +1,18 @@
 # Plex-and-OMV
 ## Neuer initialversuch gemäß Anleitung hier
 https://pimylifeup.com/raspberry-pi-plex-server/
+- aka mach das hier
+- raspberry pi OS lite 64 bit auf sd/ usb flashen
+- `sudo apt update && sudo apt upgrade`
+- `sudo apt install apt-transport-https gnupg2`
+- `curl -L https://downloads.plex.tv/plex-keys/PlexSign.v2.key | sudo gpg --yes --dearmor -o /usr/share/keyrings/plexmediaserver.v2.gpg`
+- `echo "deb [signed-by=/usr/share/keyrings/plexmediaserver.v2.gpg] https://repo.plex.tv/deb/ public main" | sudo tee /etc/apt/sources.list.d/plex.list`
+- `sudo apt update`
+- `sudo apt install plexmediaserver`
+- ``
+- ``
+- ``
+- ``
 
 ### ^ zusätzlich dazu noch   
 `sudo wget -O - https://github.com/OpenMediaVault-Plugin-Developers/installScript/raw/master/install | sudo bash` 
