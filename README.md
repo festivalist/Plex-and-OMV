@@ -135,8 +135,8 @@ That’s it! The issue should now be resolved, and your external drives should n
 
 ## Problem 5: nach OMV install wird der raspi trotz Kabel nicht im Netz gefunden  
 Lösung:  auf raspi einloggen
-`sudo omv-firstaid`
-dann fix network interface, ja auf alles, rödel rödel und es geht wieder
+`sudo omv-firstaid`  
+dann configure network interface (erste option), ja auf alles, rödel rödel und es geht wieder
 
 
 ## Problem 6   ich muss die HDD von Plex an einen win PC anschließen
