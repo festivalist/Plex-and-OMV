@@ -143,3 +143,17 @@ dann configure network interface (erste option), ja auf alles, rödel rödel und
 Lösung: BTFRS Treiber auf Windows installieren, siehe hier
 `https://github.com/maharmstone/btrfs`
 
+## Problem 7 - Nach einem Neustart kommt der Server nicht hoch. Anschließen des Monitirs zeigt mir, dass der Server erstmal einen login haben will
+- Lösung: Auto login des user Pi nach reboot einbauen
+- 1. Systemd-Override erstellen `sudo systemctl edit getty@tty1.service`
+  2. Konfiguration einfügen
+```
+[Service]
+ExecStart=
+ExecStart=-/sbin/agetty --autologin pi --noclear %I $TERM
+```
+3. Dienst neu laden
+```
+sudo systemctl daemon-reload
+sudo systemctl restart getty@tty1.service
+```
